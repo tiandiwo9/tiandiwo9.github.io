@@ -1,31 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1404.34">
-  <style type="text/css">
-    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    li.li2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000ee; -webkit-text-stroke: #0000ee}
-    span.s1 {-webkit-text-stroke: 0px #000000}
-    span.s2 {font-kerning: none}
-    span.s3 {text-decoration: underline ; font-kerning: none; color: #0000ee}
-    ul.ul1 {list-style-type: disc}
-  </style>
-</head>
-<body>
-<ul class="ul1">
-  <li class="li1"><span class="s1"></span><span class="s2">{% if site.social.weibo %}</span></li>
-  <li class="li2"><span class="s1"><a href="http://weibo.com/%7B%7Bsite.social.weibo%7D%7D"><span class="s3">Weibo<span class="Apple-converted-space"> </span></span></a></span></li>
-  <li class="li1"><span class="s1"></span><span class="s2">{% endif %} {% if site.social.github %}</span></li>
-  <li class="li2"><span class="s1"><a href="https://github.com/%7B%7Bsite.social.github%7D%7D"><span class="s3">Github<span class="Apple-converted-space"> </span></span></a></span></li>
-  <li class="li1"><span class="s1"></span><span class="s2">{% endif %} {% if site.social.twitter %}</span></li>
-  <li class="li2"><span class="s1"><a href="http://twitter.com/%7B%7Bsite.social.twitter%7D%7D"><span class="s3">Twitter<span class="Apple-converted-space"> </span></span></a></span></li>
-  <li class="li1"><span class="s1"></span><span class="s2">{% endif %} {% if site.social.gplus %}</span></li>
-  <li class="li2"><span class="s1"><a href="mailto:%7B%7Bsite.social.mail%7D%7D"><span class="s3">Email<span class="Apple-converted-space"> </span></span></a></span></li>
-  <li class="li1"><span class="s1"></span><span class="s2">{% endif %}<span class="Apple-converted-space"> </span></span></li>
-</ul>
-</body>
-</html>
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  {% if site.social.weibo %}
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}} 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  {% endif %}
+
+  {% if site.social.github %}
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/{{site.social.github}}" title="@{{site.social.github}} 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  {% endif %}
+  
+  {% if site.social.twitter %}
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  {% endif %}
+
+  {% if site.social.gplus %}
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/{{site.social.gplus}}" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  {% endif %}
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  {% if site.social.mail %}
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:{{site.social.mail}}" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  {% endif %}
+
+  </ul>
+</nav>
