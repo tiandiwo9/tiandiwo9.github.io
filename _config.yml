@@ -1,29 +1,52 @@
-# Site settings
-name: tiandiwo9
-description: “编程无止境”
-url: ""
+# Basic
+title: Vno Jekyll
+subtitle: A blog-orientation theme for Jekyll
+welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
+description: Vno Jekyll is a port of my Ghost theme vno.
+creator: <a href="http://onev.cat">@onevcat</a>
 
+url: "http://vno.onevcat.com"
 
-# Delete the lines you don't need
-email: zhangke19880503@126.com
-github_username:  tiandiwo9
-twitter_username: your_twitter_username_goes_here
-medium_username:  your_medium_username_goes_here
-# If you don't have a blog page delete the next line
-blog_url: "/blog"
+permalink: /:year/:month/:title/
 
+# Format
+highlighter: plain
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
 
-avatar: yes
-#avatar_img_path: "imgs/avatar.jpg""
-# You can link to your GitHub image. That way it will get updated 
-# automatically whenever you change your GitHub profile picture
-avatar_img_path: "https://avatars0.githubusercontent.com/u/3633849?v=3&s=460"
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: red
 
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
 
-front_img: yes
-front_img_path: "imgs/background.jpg"
-#front_img_path: "https://external.url/image.jpg"
+# Navigation buttons in the front page.
+nav:
+    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+    weibo: onevcat
+    github: onevcat
+    twitter: onevcat
+    gplus: 107108267983477358170
+    mail: onev@onevcat.com
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
