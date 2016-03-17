@@ -15,7 +15,12 @@
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
             {{ content }}
+            {% include footer.html %}
         </div>
     </div>
+    
+    {% include external.html %}
+    
   </body>
+
 </html>
