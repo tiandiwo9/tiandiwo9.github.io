@@ -2,10 +2,10 @@
 title: tiandiwo9
 subtitle: 折腾是一种态度
 # welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: 工作在搜狐视频
+description: hi，我是张科，搜狐视频iOS开发者，正在潜心研究软件开发技术。
 creator: <a href="http://onev.cat">@onevcat</a>
 
-url: "http://vno.onevcat.com"
+# url: "http://vno.onevcat.com"
 
 permalink: /:year/:month/:title/
 
