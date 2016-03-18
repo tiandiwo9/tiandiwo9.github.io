@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 写在前边，以示提醒
-date: 2016-03-18
+date: 2016-03-18 15:32:24.000000000 +09:00
 ---
 
 2012年初做iOS开发到现在马上4年时间了，从对软件开发知之甚少到自认为学到了些工程、[架构](http://www.infoq.com/cn/articles/ios-app-arch-part-01#)、[语言](https://zh.wikipedia.org/wiki/Template:%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80)、互联网产品等技术与经验。
