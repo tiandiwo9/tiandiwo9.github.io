@@ -1,25 +1,14 @@
 ---
 layout: post
-title: 张科test2
-date: 2016-02-15 15:32:24.000000000 +09:00
+title: 写在前边，以示提醒
+date: 2016-03-18
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+2012年初做iOS开发到现在马上4年时间了，从对软件开发知之甚少到自认为学到了些工程、[架构](http://www.infoq.com/cn/articles/ios-app-arch-part-01#)、[语言](https://zh.wikipedia.org/wiki/Template:%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80)、互联网产品等技术与经验。
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+一直想把自己学习过研究过被坑过的技术点整理保存，以供自己查阅分享，但是人就是`懒惰`的动物，没有紧迫或者自身动力的话就是一句空话，不过也有开发量大产品上线压力。从今往后尽可能抽出时间把研究的技术整理，加深理解学习。
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+说到了之前的工作，在这几年内呆过3家公司，[500彩票](http://www.500.com/)、[赢销通](http://www.winchannel.net)、[搜狐视频](http://tv.sohu.com)，同事们都很nice，在一同成长的过程中给予我的支持和帮组非常感谢。
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+回想09年从地大毕业做的GIS软件技术支持、遥感影像数据，因为成长性不高，觉得前途迷茫，再加上交往女朋友，收入上却是实实在在的现实考虑，下定决心职业转型，虽然很艰辛，受别人鄙视，但是坚持下来，一步一步成长后觉得这条路走的对。
