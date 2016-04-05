@@ -1,16 +1,6 @@
 <nav class="cover-navigation navigation--social">
   <ul class="navigation">
 
-  {% if site.social.weibo %}
-  <!-- Weibo -->
-  <li class="navigation__item">
-    <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}} 的微博" target="_blank">
-      <i class='social fa fa-weibo'></i>
-      <span class="label">Weibo</span>
-    </a>
-  </li>
-  {% endif %}
-
   {% if site.social.github %}
   <!-- Github -->
   <li class="navigation__item">
@@ -21,12 +11,12 @@
   </li>
   {% endif %}
   
-  {% if site.social.douban %}
-  <!-- douban -->
+  {% if site.social.stack-overflow %}
+  <!-- Github -->
   <li class="navigation__item">
-    <a href="https://douban.com/people/144029526/" title="张科的豆瓣" target="_blank">
-      <i class='social fa fa-douban'></i>
-      <span class="label">Douban</span>
+    <a href="http://stackoverflow.com/users/6160787/garfieldlover" title="@{{site.social.stack-overflow}}" target="_blank">
+      <i class='social fa fa-stack-overflow'></i>
+      <span class="label">stack-overflow</span>
     </a>
   </li>
   {% endif %}
@@ -37,6 +27,26 @@
     <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
       <i class='social fa fa-twitter'></i>
       <span class="label">Twitter</span>
+    </a>
+  </li>
+  {% endif %}
+  
+  {% if site.social.weibo %}
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}} 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  {% endif %}
+
+  {% if site.social.douban %}
+  <!-- douban -->
+  <li class="navigation__item">
+    <a href="https://douban.com/people/144029526/" title="@{{site.social.douban}} 的豆瓣" target="_blank">
+      <i class='social fa fa-flickr'></i>
+      <span class="label">Douban</span>
     </a>
   </li>
   {% endif %}
