@@ -21,6 +21,16 @@
   </li>
   {% endif %}
   
+  {% if site.social.douban %}
+  <!-- Douban -->
+  <li class="navigation__item">
+    <a href="http://douban.com/{{site.social.douban}}" title="@{{site.social.douban}} 的豆瓣" target="_blank">
+      <i class='social fa fa-douban'></i>
+      <span class="label">Douban</span>
+    </a>
+  </li>
+  {% endif %}
+  
   {% if site.social.twitter %}
   <!-- Twitter -->
   <li class="navigation__item">
