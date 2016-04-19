@@ -9,7 +9,7 @@ iOS系统分为可分为四级结构，由上至下分别为可触摸层（Cocoa
 ![4级结构](https://raw.githubusercontent.com/GarfieldLover/GarfieldLover.github.io/master/assets/postImages/797918-71efb73f5f3ab3c6.png)
 
 ## 二、可触摸层（Cocoa Touch Layer）
-#### 高级特性
+### 高级特性
 ###### [App Extensions](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1)
 - Share。分享内容与社交网站或其他实体。😖**没做过  补齐例子**
 - Action。执行与当前内容一个简单的任务。😖
@@ -69,7 +69,7 @@ taps, pinches, pans, swipes, rotations
 ###### [Gesture Recognizers](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009541)
 taps, pinches, pans, swipes, rotations
 
-#### Cocoa Touch框架
+### Cocoa Touch框架
 ###### [Address Book UI Framework](https://developer.apple.com/library/ios/ContactData/Conceptual/AddressBookProgrammingGuideforiPhone/Introduction.html#//apple_ref/doc/uid/TP40007744)
 提供创建新联系人、编辑以及选择已存在联系人
 
