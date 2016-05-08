@@ -81,3 +81,40 @@ taps, pinches, pans, swipes, rotations
 
 ###### [MapKit Framework](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009497)
 提供可以滑动的地图视图，可以使用地图提供方向或者显示自己感兴趣的点，同样可以添加标注（自定义图片或者内容），iOS4之后，mapview添加了拖拽注解以及自定义浮层（比如加乘车路线），iOS6之后，你可以创建寻路程序，当用户请求公交有关的方向，地图应用程序允许用户自己程序获取路线，除此之外，所有的应用都可以调用地图程序显示POI信息
+
+###### [Message UI Framework]
+MessageUI.framework为应用程序编写电子邮件或SMS消息的支持。组成支持包括您在您的应用程序呈现视图控制器的接口。可以填充这个视图控制器领域设置收件人，主题，正文内容，并且希望与消息包括任何附件。
+
+###### [Notification Center Framework](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)
+通知中心框架（NotificationCenter.framework）为创建显示在通知中心信息小部件的支持。
+
+###### [PushKit Framework]
+该PushKit框架（PushKit.framework）提供对VoIP应用程序注册的支持。
+
+###### [UIKit Framework](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKit_Framework/index.html#//apple_ref/doc/uid/TP40006955)
+ UIKit框架（UIKit.framework）包含Objective-C程序接口，提供实现图形，事件驱动的iPhone应用的关键架构。 iPhone OS中的每一个应用采用这个框架实现如下核心功能：
+ 
+- 基本的应用程序管理和基础架构，包括应用程序的main run loop
+- 用户界面管理，包括storyboards和nib的支持
+- 视图控制器模型来封装用户界面的内容
+- 代表标准系统视图和控件对象
+- 处理触摸和运动为基础的事件支持
+- 支持文档模型，其中包括iCloud的整合
+- 图形和窗口支持，包括对外部显示器的支持
+- 支持多任务
+- 打印支持
+- 定制标准的UIKit控件的外观支持
+- 文本和网页内容的支持
+- 剪切复制粘贴
+- 对于动画用户界面内容的支持
+- 集成通过URL方案和框架接口的系统上的其他应用
+- 为残疾用户可访问性支持
+- 支持苹果推送通知服务
+- 本地通知调度和交付
+- PDF创建
+- 使用自定义输入视图的支持行为类似系统键盘
+- 创建自定义文本视图的支持与系统交互的键盘
+- 支持通过电子邮件，微博，Facebook的分享内容和其他服务
+
+![uikit架构](http://example.com/example.png)
+![uikit架](http://example.com/example.png)
