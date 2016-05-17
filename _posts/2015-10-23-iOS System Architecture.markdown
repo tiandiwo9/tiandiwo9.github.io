@@ -126,7 +126,7 @@ MessageUI.framework为应用程序编写电子邮件或SMS消息的支持。组�
 ### 高级特性
 媒体层包含图形，音频和用来实现你的应用程序的多媒体体验视频技术。
 
-###### 图形技术
+##### 图形技术
 
 技术 | 描述
 ---|---
@@ -140,7 +140,7 @@ TextKit  Core Text | TextKit是用于进行精细的排版和文字管理UIKit�
 Image I/O | 提供接口读取和写入大多数图像格式
 Photos Library |提供访问用户的照片，视频和媒体
 
-###### 音频技术
+##### 音频技术
 iOS的音频技术与底层硬件工作，包括播放和录制高品质的音频，处理MIDI内容，并与设备的内置声音工作能力.
 
 技术 | 描述
@@ -151,6 +151,7 @@ OpenAL | Open Audio Library 开发者能应用OpenAL在需要位置音频输出�
 Core Audio | 一个基于C语言的接口，并支持立体声（Stereo Audio）。能 产生、录制、混合和播放音频。开发者也能通过核心音频访问手机设备的振动功能。
 
 iOS支持[多种行业标准](https://zh.wikipedia.org/wiki/%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F)和特定苹果音频格式，包括以下内容：
+
 - AAC
 - Apple Lossless (ALAC)
 - A-law
@@ -161,7 +162,7 @@ iOS支持[多种行业标准](https://zh.wikipedia.org/wiki/%E9%9F%B3%E9%A2%91%E
 - Microsoft GSM 6.10
 - AES3-2003
 
-###### 视频技术
+##### 视频技术
 iOS的视频技术为您的应用程序管理的静态视频内容或播放流从互联网内容的支持.
 
 技术 | 描述
