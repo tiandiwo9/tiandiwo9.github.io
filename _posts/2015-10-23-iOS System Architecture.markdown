@@ -120,3 +120,60 @@ MessageUI.framework为应用程序编写电子邮件或SMS消息的支持。组�
 
 
 ![uikit架](https://raw.githubusercontent.com/GarfieldLover/GarfieldLover.github.io/master/assets/postImages/20160330000207761.jpg)
+
+
+## 三、媒体层（Media Layer）
+### 高级特性
+媒体层包含图形，音频和用来实现你的应用程序的多媒体体验视频技术。
+
+###### 图形技术
+
+技术 | 描述
+---|---
+UIKit | 定义绘制图像、贝塞尔路径、渲染图像和基于文本的内容、视图动画
+Core Graphics | 支持基于路径（Path-based）画图、抗混淆（Anti-aliased）重载、梯度 （Gradients）、图像（Images）、颜色（Colors）、坐标空间转换（Coordinate-space Transformations）、pdf文档创建、显示和解析。虽然API是基于C语言的，它采用基于对象的抽象表征基础画图对象，使得图像内容易于保存和复用。
+Core Animation | 一种高级动画和合成技术，它用优化的重载路径（Rendering Path）实现复杂的动画和虚拟效果。集成到iPhone OS 的许多部分，包括UIKit类如UIView，提供许多标准系统行为的动画。开发者也能利用这个框架中的Objective-C接口创建客户化的动画。
+Core Image |提供了操纵视频和静止图像的高级支持
+OpenGL ES和GLKit |OpenGL ES的处理使用硬件加速接口，先进的2D和3D渲染。GLKit是一套Objective-C类可提供的OpenGL ES的使用面向对象的接口。
+Metal | 使复杂的图形渲染和计算任务令人难以置信的高性能
+TextKit  Core Text | TextKit是用于进行精细的排版和文字管理UIKit类家族。Core Text是用于处理先进的印刷效果的基于C语言的框架
+Image I/O | 提供接口读取和写入大多数图像格式
+Photos Library |提供访问用户的照片，视频和媒体
+
+###### 音频技术
+iOS的音频技术与底层硬件工作，包括播放和录制高品质的音频，处理MIDI内容，并与设备的内置声音工作能力.
+
+技术 | 描述
+---|---
+Media Player framework |当你想快速的音视频集成到应用程序中使用这个框架，当你不需要控制播放的行为
+AV Foundation | 管理音频和视频的录制和播放一个Objective-C接口。使用此框架录制音频，当你需要在音频播放过程细粒度控制
+OpenAL | Open Audio Library 开发者能应用OpenAL在需要位置音频输出的游戏或其他应用中实现高性能、高质量的音频。
+Core Audio | 一个基于C语言的接口，并支持立体声（Stereo Audio）。能 产生、录制、混合和播放音频。开发者也能通过核心音频访问手机设备的振动功能。
+
+iOS支持[多种行业标准](https://zh.wikipedia.org/wiki/%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F)和特定苹果音频格式，包括以下内容：
+- AAC
+- Apple Lossless (ALAC)
+- A-law
+- IMA/ADPCM (IMA4)
+- Linear PCM
+- µ-law
+- DVI/Intel IMA ADPCM
+- Microsoft GSM 6.10
+- AES3-2003
+
+###### 视频技术
+iOS的视频技术为您的应用程序管理的静态视频内容或播放流从互联网内容的支持.
+
+技术 | 描述
+---|---
+UIImagePickerController | 用户选择媒体文件的UIKit的视图控制器
+AVKit | 该AVKit框架提供了视频展示了一套简单易用的接口。该框架支持全屏幕和部分屏幕的视频播放，并支持可选的播放控制的用户
+AV Foundation | 提供先进的视频播放和录制功能,细粒度控制,直播视频
+Core Media | 用于操纵媒体底层数据类型和接口
+
+iOS支持多种行业标准的[视频格式](https://www.zhihu.com/question/20997688)和[压缩标准](http://www.360doc.com/content/11/0922/11/496343_150310986.shtml)，包括以下内容：
+
+- H.264视频，高达1.5 Mbps的，640 x 480像素，每秒30帧，H.264的Baseline Profile的采用AAC-LC音频，高达160 Kbps的48千赫，立体声音效的低Complexity版本的.m4v，.MP4和.MOV文件格式
+- H.264视频，高达768 Kbps的，320×240像素，每秒30帧，Baseline Profile支持高达1.3采用AAC-LC音频电平高达160 Kbps的48千赫，立体声音效的.m4v，.MP4和。 MOV文件格式
+- MPEG-4视频，高达2.5 Mbps的，640 x 480像素，每秒30帧，Simple Profile支持AAC-LC音频，高达160 Kbps的48千赫，立体声音效的.m4v，.MP4和.MOV文件格式
+- 众多音频格式，包括在列出的音频技术
