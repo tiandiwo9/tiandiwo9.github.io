@@ -10,7 +10,7 @@ layout: default
       <h2 class="post-list__post-title post-title"><a href="{{ post.url }}" title="访问 {{ post.title }}">{{ post.title }}</a></h2>
       <p class="excerpt">{{ post.content | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
       <div class="post-list__meta">
-		  <time datetime="{{post.date | date: date_to_xmlschema}}" class="post-list__meta--date date">{{ post.date | date: "%F"}}</time> <!-- &#8226 -->;
+		  <time datetime="{{post.date | date: date_to_xmlschema}}" class="post-list__meta--date date">{{ post.date | date: "%F"}}</time> &#8226;
 		   <span class="post-list__meta--tags tags">{{ post.tags }}</span>
            {% if post.tags.size > 0 %}
                {% capture tags_content %} with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
@@ -28,6 +28,7 @@ layout: default
            {% else %}
                {% assign tags_content = '' %}
            {% endif %}
+           <p id="post-list__meta">Posted {{ category_content }}{{ tags_content }}</p>
 		   
 		   <!-- <a class="btn-border-small" href={{ tag.url }}>继续阅读</a> -->
 	   </div>
