@@ -2,9 +2,7 @@
 layout: post
 title: iOS System Architecture
 date: 2015-10-12 15:32:24.000000000 +09:00
-categories:
-- cat1
-- cat2
+tags: 测试呢
 ---
 
 ## 一、概述
