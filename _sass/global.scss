@@ -176,13 +176,13 @@ pre {
 
 table {
   color: $gray-darkest;
-  font-size: .10em;
+  font-size: .12em;
   text-align: left;
-  line-height: 20px;
+  line-height: 25px;
   border-spacing: 0;
   border: 2px solid darken($primary-color, 10%);
-  width: 90%;
-  margin: 30px auto;
+  width: 10%;
+  margin: 20px auto;
 }
 
 thead tr:first-child {
