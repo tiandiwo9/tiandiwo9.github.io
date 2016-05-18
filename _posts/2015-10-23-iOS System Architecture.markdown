@@ -2,7 +2,6 @@
 layout: post
 title: iOS System Architecture
 date: 2015-10-12 15:32:24.000000000 +09:00
-tags:哦哦哦哦哦哦哦哦哦
 ---
 ## 一、概述
 iOS系统分为可分为四级结构，由上至下分别为可触摸层（Cocoa Touch Layer）、媒体层（Media Layer）、核心服务层（Core Services Layer）、核心系统层（Core OS Layer），每个层级提供不同的服务。低层级结构提供基础服务如文件系统、内存管理、I/O操作等。高层级结构建立在低层级结构之上提供具体服务如UI控件、文件访问等。
@@ -178,54 +177,3 @@ iOS支持多种行业标准的[视频格式](https://www.zhihu.com/question/2099
 - H.264视频，高达768 Kbps的，320×240像素，每秒30帧，Baseline Profile支持高达1.3采用AAC-LC音频电平高达160 Kbps的48千赫，立体声音效的.m4v，.MP4和。 MOV文件格式
 - MPEG-4视频，高达2.5 Mbps的，640 x 480像素，每秒30帧，Simple Profile支持AAC-LC音频，高达160 Kbps的48千赫，立体声音效的.m4v，.MP4和.MOV文件格式
 - 众多音频格式，包括在列出的音频技术
-
-#### AirPlay技术
-AirPlay让应用串流声音和视频内容到Apple TV或者串流声音内容到第三方扬声器和接收器。
-
-AirPlay内建于许多框架，包括UIKit、Media Player、AVFoundation、Core Audio。因此在大多数情况你不需要为了支持它做任何事。在使用那些框架时，当播放内容时自动获得AirPlay支持。当用户选择使用AirPlay播放内容时系统自动进行路由。
-
-### Media Layer框架
-###### [Assets Library Framework](https://github.com/coderyi/blog/blob/master/articles/2014/1016_AssetsLibrary.md)
-提供访问的照片应用程序在用户的设备上管理的照片和视频
-
-###### [AV Foundation Framework](https://developer.apple.com/library/ios/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40010188)
-提供了一组Objective-C类的用于播放，录制和管理音频和视频内容
-- 音频会话管理，包括声明你的应用程序的音频功能的系统支持
-- 您的应用程序的媒体资产管理
-- 编辑媒体内容支持
-- 捕捉音频和视频的能力
-- 回放音频和视频的能力
-- 跟踪管理
-- 元数据管理的媒体项目
-- 立体声声像
-- 声音之间的精确同步
-- 一个Objective-C接口，用于确定有关的声音文件，如数据格式，采样率和通道数的详细信息
-- 通过AirPlay的流媒体内容的支持
-
-###### AVKit Framework
-AVPlayerViewController
-
-###### [Core Audio](https://developer.apple.com/library/ios/documentation/MusicAudio/Conceptual/CoreAudioOverview/Introduction/Introduction.html#//apple_ref/doc/uid/TP40003577)
-
-框架 | 功能
----|---
-[CoreAudio.framework](http://www.jianshu.com/p/40e6c9a16add) | 定义整个核心音频使用的音频数据类型
-[AudioToolbox.framework](http://www.cnblogs.com/sunminmin/p/4475710.html) | 提供对音频文件和流的播放和录制服务。该框架还提供了用于管理音频文件，播放系统警告声音，和触发某些设备的震动功能的支持
-[AudioUnit.framework](http://www.jianshu.com/p/40e6c9a16add) | 提供了使用内置的音频单元，它们是音频处理模块的服务。
-[CoreMIDI.framework](https://github.com/petegoodliffe/PGMidi) | 提供了一种标准的方式与MIDI设备，包括硬件键盘和合成器进行通信。
-MediaToolbox.framework | 提供对音频接口。
-
-###### CoreAudioKit Framework
-Core MIDI 和 CoreAudioKit 可以被用来使应用程序表现为 MIDI 设备
-
-###### [Core Graphics Framework](http://southpeak.github.io/blog/2014/11/10/quartz-2dbian-cheng-zhi-nan-zhi-%5B%3F%5D-:gai-lan/)
-基于矢量的绘图在OS X中使用的引擎支持基于路径绘图，抗锯齿渲染，渐变，图像，颜色，坐标空间变换和PDF文档的创建，显示和分析。虽然API是基于C，它使用基于对象的抽象以表示基本绘图对象，便于存储和重用你的图形内容
-
-###### [Core Image Framework](https://www.pupboss.com/core-image/)
-提供一组强大的内建过滤器来操作视频和静态图像。
-你能在触摸弹起、纠正图片以及面部和特征检测等许多方面使用这些内建的过滤器。这些过滤器的先进特点是它们操作在非破坏方式，即原先的图像不被改变。
-
-###### [Core Text Framework](http://geeklu.com/2013/03/core-text/)
-提供一个对文本进行布局和字体处理的简单的、高性能的C-based接口。
-该框架用在不使用TextKit但仍想获得在字处理应用中发现的先进文本处理能力。
-该框架提供了一个智能的文本布局引擎，包括在其它内容周围环绕文本的能力，它也支持使用多种字体和呈现属性的先进的文本风格。
