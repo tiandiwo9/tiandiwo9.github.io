@@ -1,5 +1,5 @@
 ---
-layout: blog_by_tag
+layout: post
 title: iOS System Architecture
 date: 2015-10-12 15:32:24.000000000 +09:00
 tags: github-pages
