@@ -50,7 +50,7 @@ h3,
 h4,
 h5,
 h5 {
-  margin-top: .7em;
+  margin-top: .3em;
   margin-bottom: .8em;
   font-family: $serif-font;
   font-weight: lighter;
@@ -280,7 +280,8 @@ td:last-child {
 
   .content-wrapper__inner {
     margin: 0 10%;
-    padding: 15px 0;
+    padding-top: 25px;
+    padding-bottom: 15px;
   }
 
 .footer {
