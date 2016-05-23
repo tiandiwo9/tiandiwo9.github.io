@@ -19,7 +19,7 @@ layout: default
                   {% endif %}
               {% endfor %}
               {% if category %}
-                  {% capture category_content %} in <!-- <span class="label" style="background-color:{{ category.color }}"> --><a href="/blog/category/{{ category.slug }}/">{{ category.name }}</a><!-- </span> -->{% endcapture %}
+                {% capture category_content %} in <span class="label" style="background-color:{{ category.color }}"><a href="/blog/category/{{ category.slug }}/">{{ category.name }}</a></span>{% endcapture %}
               {% endif %}
           {% else %}
               {% assign category_content = '' %}
@@ -42,9 +42,7 @@ layout: default
                {% assign tags_content = '' %}
            {% endif %}
 		   
-           <span id="post-list__meta">{{ tags_content }}</span>
-		   <!-- fa fa-bars -->
-		   <!-- <a class="btn-border-small" href={{ tag.url }}>继续阅读</a> -->
+           <span id="post-list__meta">{{ category_content }}{{ tags_content }}</span>
 	   </div>
       <hr class="post-list__divider" />
     </li>

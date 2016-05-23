@@ -9,24 +9,8 @@ layout: default
 <div id="post-content">
     {% if site.tags[page.tag] %}
         {% for post in site.tags[page.tag] %}
-            <!-- {% capture post_year %}{{ post.date | date: '%Y' }}year{% endcapture %}
-            {% if forloop.first %}
-                <h3>{{ post_year }}</h3><div class="list-group">
-            {% endif %}
 
-            {% if forloop.first == false %}
-                {% assign previous_index = forloop.index0 | minus: 1 %}
-                {% capture previous_post_year %}{{ site.tags[page.tag][previous_index].date | date: '%Y' }}{% endcapture %}
-                {% if post_year != previous_post_year %}
-                    </div><h3>{{ post_year }}</h3><div class="list-group">
-                {% endif %}
-            {% endif %} -->
-			
 		    <br></br>
-			
-            <!-- <a href="{{ post.url }}/" class="list-group-item">
-                <h4 class="list-group-item-heading">{{ post.title }}</h4>
-            </a> -->
 				
 			    <li>
 			      <h2 class="post-list__post-title post-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
@@ -41,7 +25,7 @@ layout: default
 			                  {% endif %}
 			              {% endfor %}
 			              {% if category %}
-			                  {% capture category_content %} in <!-- <span class="label" style="background-color:{{ category.color }}"> --><a href="/blog/category/{{ category.slug }}/">{{ category.name }}</a><!-- </span> -->{% endcapture %}
+                {% capture category_content %} in <span class="label" style="background-color:{{ category.color }}"><a href="/blog/category/{{ category.slug }}/">{{ category.name }}</a></span>{% endcapture %}
 			              {% endif %}
 			          {% else %}
 			              {% assign category_content = '' %}
@@ -64,9 +48,7 @@ layout: default
 			               {% assign tags_content = '' %}
 			           {% endif %}
 		   
-			           <span id="post-list__meta">{{ tags_content }}</span>
-					   <!-- fa fa-bars -->
-					   <!-- <a class="btn-border-small" href={{ tag.url }}>继续阅读</a> -->
+           <span id="post-list__meta">{{ category_content }}{{ tags_content }}</span>
 				   </div>
 			      <hr class="post-list__divider" />
 			    </li>
