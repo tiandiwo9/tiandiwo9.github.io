@@ -19,7 +19,11 @@ $(document).ready(function() {
     $('.main-post-list').removeClass('hidden');
   }
 
-  if (pathName.substring(0, 8) == "/tag/"||/\/blog\/tag\/category\//i.test(pathName)) {
+  if (pathName.substring(0, 5) == "/tag/"||/\/blog\/tag\//i.test(pathName)) {
+    $('.panel-cover').addClass('panel-cover--collapsed');
+  }
+
+  if (pathName.substring(0, 10) == "/category/"||/\/blog\/category\//i.test(pathName)) {
     $('.panel-cover').addClass('panel-cover--collapsed');
   }
 
