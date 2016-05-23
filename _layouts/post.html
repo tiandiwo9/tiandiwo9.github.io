@@ -14,35 +14,13 @@ layout: default
   </section>
 </article>
 
-<br></br>
+<br/>
     <div class="post related">
         <a rel="prev" id="prev-btn" class="btn small square" href="/objc-runtime-02/">← Objective-C的Runtime（二）</a>
         <a rel="next" id="next-btn" class="btn small square" href="/swift-init-modifiers/">Swift init方法的一些修饰符 →</a>
     </div>
-
-   {% if page.next %}
-   {% assign current = page.next %}
-   <div class="read-more-item">
-       <span class="read-more-item-dim">最近的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="{{ current.url }}" title="link to {{ current.title }}">{{ current.title }}</a></h2>
-       <p class="excerpt">{{ current.content | markdownify | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
-       <div class="post-list__meta"><time datetime="{{current.date | date: date_to_xmlschema}}" class="post-list__meta--date date">{{current.date | date: "%F"}}</time> &#8226; <span class="post-list__meta--tags tags">{{current.tags}}</span><a class="btn-border-small" href={{current.url}}>继续阅读</a></div>
-   </div>
-   {% endif %}
-   
-   {% if page.previous %}
-   {% assign current = page.previous %}
-   <div class="read-more-item">
-       <span class="read-more-item-dim">更早的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="{{ current.url }}" title="link to {{ current.title }}">{{ current.title }}</a></h2>
-       <p class="excerpt">{{ current.content | markdownify | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
-       <div class="post-list__meta"><time datetime="{{current.date | date: date_to_xmlschema}}" class="post-list__meta--date date">{{current.date | date: "%F"}}</time> &#8226; <span class="post-list__meta--tags tags">{{current.tags}}</span><a class="btn-border-small" href={{current.url}}>继续阅读</a></div>
-   </div>
-   {% endif %}
-    
-<br></br>
-<br></br>
-<br></br>
+<br/>
+<br/>
 
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
