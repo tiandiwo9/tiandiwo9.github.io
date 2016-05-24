@@ -16,8 +16,13 @@ layout: default
 
 <br/>
     <div class="post related">
-        <a rel="prev" id="prev-btn" class="btn small square" href="/objc-runtime-02/">← Objective-C的Runtime（二）</a>
-        <a rel="next" id="next-btn" class="btn small square" href="/swift-init-modifiers/">Swift init方法的一些修饰符 →</a>
+       {% if page.next %}
+       {% assign current = page.next %}
+        <a rel="prev" id="prev-btn" class="btn small square" href="{{ current.url }}">← {{ current.title }} </a>
+        
+   {% if page.previous %}
+   {% assign current = page.previous %}
+        <a rel="next" id="next-btn" class="btn small square" href="{{ current.url }}">{{ current.title }} →</a>
     </div>
 <br/>
 <br/>
