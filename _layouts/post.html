@@ -14,8 +14,19 @@ layout: default
   </section>
 </article>
 
-<br/>
+    <div class="post related">
+           {% if page.previous %}
+       {% assign current = page.previous %}
 
+        <a rel="prev" id="prev-btn" class="btn small square" href="{{ current.url }}">← {{ current.title }} </a>
+   {% endif %}
+
+       {% if page.next %}
+       {% assign current = page.next %}
+        <a rel="next" id="next-btn" class="btn small square" href="{{ current.url }}"> {{ current.title }} →</a>
+           {% endif %}
+
+    </div>
 <br/>
 <br/>
 
