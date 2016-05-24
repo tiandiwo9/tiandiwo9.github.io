@@ -1,20 +1,20 @@
-- slug: django
-  name: Django
+- slug: Architecture
+  name: Architecture
 
-- slug: django-template-tags
-  name: Django Template Tags
+- slug: Frameworks
+  name: Frameworks
 
-- slug: font-awesome
-  name: Font Awesome
+- slug: Cocoa Touch
+  name: Cocoa Touch
 
-- slug: icons
-  name: Icons
+- slug: Awesome
+  name: Awesome
 
-- slug: image-processing
-  name: Image Processing
+- slug: Swift
+  name: Swift
 
-- slug: python
-  name: Python
+- slug: Objective-C
+  name: Objective-C
 
 - slug: github
   name: GitHub

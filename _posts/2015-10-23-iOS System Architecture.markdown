@@ -2,8 +2,7 @@
 layout: post
 title: iOS System Architecture
 date: 2015-10-12 15:32:24.000000000 +09:00
-category: general
-tags: [github-pages , jekyll]
+tags: [Cocoa Touch , Architecture , Frameworks]
 ---
 
 ## 一、概述

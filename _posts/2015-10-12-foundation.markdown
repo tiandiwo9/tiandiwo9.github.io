@@ -2,6 +2,8 @@
 layout: post
 title: iOS Frameworks - Foundation
 date: 2015-10-12 15:32:24.000000000 +09:00
+tags: [Cocoa Touch , Frameworks]
+
 ---
 # 概述
 Foundation框架是Cocoa框架的最重要组成部分，与界面无关，包含了大量常用的API。OC跟对象都是NSObject，就处在Foundation中。
