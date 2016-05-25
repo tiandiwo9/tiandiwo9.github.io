@@ -230,3 +230,41 @@ Core MIDI 和 CoreAudioKit 可以被用来使应用程序表现为 MIDI 设备
 提供一个对文本进行布局和字体处理的简单的、高性能的C-based接口。
 该框架用在不使用TextKit但仍想获得在字处理应用中发现的先进文本处理能力。
 该框架提供了一个智能的文本布局引擎，包括在其它内容周围环绕文本的能力，它也支持使用多种字体和呈现属性的先进的文本风格。
+
+###### Core Text Framework
+为Core Media框架提供缓冲和缓冲池支持。多数应用从不直接使用该框架。
+
+###### [Game Controller Framework](https://developer.apple.com/library/ios/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276)
+在应用中发现和配置针对iPhone/iPod/iPad设备的游戏控制器。游戏控制器可以是物理连接到iOS设备或者是通过蓝牙无线连接。
+
+###### [GLKit Framework](http://www.raywenderlich.com/5223/beginning-opengl-es-2-0-with-glkit-part-1)
+该GLKit框架（GLKit.framework）包含了一组Objective-C的基础工具类，简化了创建一个OpenGL ES的应用程序所需的工作。GLKit支持应用程序开发的四个关键领域：
+
+- 该GLKView和GLKViewController类提供了一个标准实现启用OpenGL ES视图，以及相关的渲染循环。视图管理代表应用程序的底层帧缓冲区对象。
+- 该GLKTextureLoader类提供图像转换和加载程序到您的应用程序，允许它的纹理图像自动加载到您的上下文。它可以同步或异步加载纹理。当加载纹理不同步，您的应用程序提供了当纹理加载到你的上下文被称为完成处理程序块。
+- 所述GLKit框架提供向量，矩阵，和四元的实现，以及为提供在OpenGL ES 1.1中找到的相同的功能的矩阵堆栈操作。
+- 该GLKBaseEffect，GLKSkyboxEffect和GLKReflectionMapEffect类提供现有的，可配置的图形着色器实现常用的图形操作。特别是，GLKBaseEffect类实现中发现灯光和材料模型的OpenGL ES 1.1规范，简化了从的OpenGL ES 1.1迁移应用更高版本的OpenGL ES所需的工作量。
+
+###### [Image I/O Framework](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/ImageIOGuide/imageio_basics/ikpg_basics.html#//apple_ref/doc/uid/TP40005462-CH216-TPXREF101)
+ImageI/O 框架(ImageIO.framework)提供输入和输出图像数据和图像元数据的接口。
+该框架利用CoreGraphics数据类型和功能，并支持在ios 上所有的可获得的标准的图像类型。你能使用这个框架存取Exif和IPTC元数据属性。
+
+###### Media Accessibility Framework
+管理媒体文件的字幕内容
+
+###### [Media Player Framework](http://blog.csdn.net/weisubao/article/details/42126083)
+提供应用中播放声音和视频的高级别支持。
+
+###### [Metal Framework](http://objccn.io/issue-18-2/)
+[图形渲染流水线](http://www.cocoachina.com/game/20141013/9890.html)  
+Metal是与OpenGL ES是并列的，它们都是应用对GPU访问的底层接口。而Metal则提供了更底层，更面向硬件的接口.
+
+###### OpenAL Framework
+开放音频库（OpenAL）接口是在应用程序发布方位音频的跨平台标准。
+
+###### [OpenGL ES Framework](http://www.cocoachina.com/cms/tags.php?/OpenGL+ES/)
+OpenGLES 框架 (OpenGLES.framework)提供绘制2d和3d内容的工具， 它是一个C-based的框架。该框架以最接近设备硬件的方式为全屏沉浸式应用例如游戏提供细粒度的图形控制和高的帧率。
+
+###### [Photos Framework](http://kayosite.com/ios-development-and-detail-of-photo-framework.html)
+PhotoKit 是一套比 AssetsLibrary 更完整也更高效的库，对资源的处理跟 AssetsLibrary 也有很大的不同。
+
