@@ -279,11 +279,11 @@ QuartzCore 框架(QuartzCore.framework)包含Core Animation接口。Core Animati
 [demo](http://www.cocoachina.com/ios/20141113/10205.html)
  
  ###### [SpriteKit Framework](https://onevcat.com/2013/06/sprite-kit-start/)
-[SpriteKit和cocos2d对比]( http://blog.sina.com.cn/s/blog_4b55f6860101iy87.html)
 为2d和2.5d游戏提供硬件加速的动画系统。SpriteKit提供大多数游戏需要的基础，包括一个图形引擎和动画系统，声音播放支持，一个物理仿真引擎。
 在Sprite Kit应用中内容组织为场景。一个场景包括纹理对象，视频，路径图形，核心图像过滤器和其它的特效。
+[SpriteKit和cocos2d对比](http://blog.sina.com.cn/s/blog_4b55f6860101iy87.html)
 
-## 三、核心服务层（Core Services Layer）
+## 四、核心服务层（Core Services Layer）
 ### 高级特性
 
 ###### [Peer-to-Peer Services](http://www.cocoachina.com/industry/20140408/8118.html)
