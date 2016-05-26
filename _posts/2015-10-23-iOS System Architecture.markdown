@@ -268,3 +268,23 @@ OpenGLES 框架 (OpenGLES.framework)提供绘制2d和3d内容的工具， 它是
 ###### [Photos Framework](http://kayosite.com/ios-development-and-detail-of-photo-framework.html)
 PhotoKit 是一套比 AssetsLibrary 更完整也更高效的库，对资源的处理跟 AssetsLibrary 也有很大的不同。
 
+###### Photos UI Framework
+可以在照片应用中编辑图片和视频资源。
+
+###### [Quartz Core Framework](http://blog.zzist.cn/index.php/archives/CoreAnimation1.html)
+QuartzCore 框架(QuartzCore.framework)包含Core Animation接口。Core Animation是一个先进的复合技术，使用它能容易创建快和有效的view-based的动画。
+
+###### [SceneKit Framework](http://objccn.io/issue-18-3/)
+3D 渲染框架。修改器、节点约束、骨骼动画。支持了粒子效果、物理引擎、脚本事件以及多通道分层渲染等多种技术。
+[demo](http://www.cocoachina.com/ios/20141113/10205.html)
+ 
+ ###### [SpriteKit Framework](https://onevcat.com/2013/06/sprite-kit-start/)
+[SpriteKit和cocos2d对比]( http://blog.sina.com.cn/s/blog_4b55f6860101iy87.html)
+为2d和2.5d游戏提供硬件加速的动画系统。SpriteKit提供大多数游戏需要的基础，包括一个图形引擎和动画系统，声音播放支持，一个物理仿真引擎。
+在Sprite Kit应用中内容组织为场景。一个场景包括纹理对象，视频，路径图形，核心图像过滤器和其它的特效。
+
+## 三、核心服务层（Core Services Layer）
+### 高级特性
+
+###### [Peer-to-Peer Services](http://www.cocoachina.com/industry/20140408/8118.html)
+这个Multipeer Connectivity框架提供通过蓝牙进行p2p连接的能力。你能使用p2p连接来启动与附近设备的通讯会话。
