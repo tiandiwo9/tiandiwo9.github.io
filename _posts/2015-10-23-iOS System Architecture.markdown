@@ -288,3 +288,62 @@ QuartzCore 框架(QuartzCore.framework)包含Core Animation接口。Core Animati
 
 ###### [Peer-to-Peer Services](http://www.cocoachina.com/industry/20140408/8118.html)
 这个Multipeer Connectivity框架提供通过蓝牙进行p2p连接的能力。你能使用p2p连接来启动与附近设备的通讯会话。
+
+###### [iCloud Storage](http://www.devtf.cn/?p=574#)
+iCloud存储让应用把用户文档和数据写到一个中心位置，用户然后能从他们的计算机和ios 设备存取这些数据。
+- iCloud的文档存储，使用此功能可以存储用户文档和数据用户的iCloud帐户。
+- iCloud的键值数据存储。使用此功能，以您的应用程序实例之间共享少量数据。
+- CloudKit存储。当您要创建公开共享的内容，或当你要管理自己的数据的传输使用此功能。
+
+###### [Block Objects](http://www.jianshu.com/p/29d70274374b)
+blockobject本质上是一个异步匿名函数。Blocks尤其用作回调或放在你需要一种容易的组合执行代码和相关数据方式的地方。
+在ios，通常在下面的场景使用Blocks：
+- 作为代理或代理方法的代替；
+- 作为回调功能的代替；
+- 为某个一次性操作实现其完成处理函数；
+- 在一个集合中的所有项上执行一个任务；
+- 与提交队列一起执行异步任务。
+
+###### [Data Protection](http://blog.csdn.net/lifengzhong/article/details/7739477)
+DataProtection允许应用利用设备上已有的内建的加密方法来使用用户的敏感数据。
+当应用指定一个特定的文件被保护时，系统在磁盘上以加密格式存储该文件。
+
+###### File-Sharing Support
+添加UIFileSharingEnabled在应用程序的Info.plist的文件，并设置键的值是。
+
+###### [Grand Central Dispatch](http://www.dreamingwish.com/article/gcdgrand-central-dispatch-jiao-cheng.html)
+Grand Central Dispatch简称（GCD）是苹果公司开发的技术，以优化的应用程序支持多核心处理器和其他的对称多处理系统的系统。这建立在任务并行执行的线程池模式的基础上的。
+
+###### [In-App Purchase](http://blog.devtang.com/2012/12/09/in-app-purchase-check-list/)
+In-App Purchase 提供在应用中销售应用特定的内容和服务以及来自iTunes的内容的能力。这个功能使用StoreKit框架实现，并提供使用用户的iTunes账号来处理金融方面的事务需要的基础。
+
+###### [SQLite](http://ios.jobbole.com/83542/)
+SQLite库让你在你的应用中嵌入一个轻量级的sql数据库，你能创建本地数据库文件，管理数据库表和表中的数据记录。
+
+###### [XML Support](https://github.com/robbiehanson/KissXML)
+Foundation框架提供一个NSXMLParser类用来从一个xml文档中引出元素。操作xml内容的额外的支持由libxml2库提供支持.
+
+### Core Services框架
+###### [Accounts Framework](http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/)
+为确定的用户账号提供单点登录模式。单点登录通过消除用户分离的多个账号需要的多次登录提示，来增强用户体验。
+
+###### [Address Book Framework](http://blog.csdn.net/runintolove/article/details/51387594)
+提供可编程存取用户的联系人数据库的方式。存取用户的联系人数据需要用户的明确的许可。应用因此必须准备好用户拒绝存取的情形。应用也鼓励提供Info.plist键来描述需要存取的原因。
+
+###### [Ad Support Framework](http://www.cnblogs.com/BigPolarBear/p/3359526.html)
+提供可编程存取用户的联系人数据库的方式。存取用户的联系人数据需要用户的明确的许可。应用因此必须准备好用户拒绝存取的情形。应用也鼓励提供Info.plist键来描述需要存取的原因。  
+注意：由于idfa会出现取不到的情况，故绝不可以作为业务分析的主id，来识别用户。 
+注意：如果用户将属于此Vender的所有App卸载，则idfv的值会被重置，即再重装此Vender的App，idfv的值和之前不同。
+
+###### [CFNetwork Framework](http://www.tqcto.com/article/web/37146.html)
+高性能的使用面向对象对网络协议进行抽象的一组C-based接口。这些抽象提供对协议栈细节的控制，使它容易使用低级别的构造例如BSDsockets。
+- 使用BSD sockets。
+- 使用SSL或TLS创建安全连接。
+- 解析DNS主机
+- 与HTTP服务器、认证HTTP服务器、HTTPS服务器交互。
+- 与FTP服务器交互。
+- 发布、解决和浏览Bonjour服务。
+
+CFNetwork物理和理论上基于BSD sockets。
+
+
