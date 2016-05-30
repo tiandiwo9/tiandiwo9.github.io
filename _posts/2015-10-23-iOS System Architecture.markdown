@@ -337,6 +337,7 @@ Foundation框架提供一个NSXMLParser类用来从一个xml文档中引出元�
 
 ###### [CFNetwork Framework](http://www.tqcto.com/article/web/37146.html)
 高性能的使用面向对象对网络协议进行抽象的一组C-based接口。这些抽象提供对协议栈细节的控制，使它容易使用低级别的构造例如BSDsockets。
+
 - 使用BSD sockets。
 - 使用SSL或TLS创建安全连接。
 - 解析DNS主机
@@ -346,4 +347,99 @@ Foundation框架提供一个NSXMLParser类用来从一个xml文档中引出元�
 
 CFNetwork物理和理论上基于BSD sockets。
 
+###### [CloudKit Framework](http://www.devtf.cn/?p=574#)
+应用程序和iCloud中之间移动数据的管道，也可以把数据存储在云端，既可以完全把数据存储在云端，也可以本地和远程都存储。
 
+###### [Core Data Framework](http://allluckly.cn/%E6%8C%81%E4%B9%85%E5%8C%96/chijiuhua01)
+CoreData框架打算在数据模式是高结构化的应用中使用，在xcode中能够使用图形工具来建立一个表现你的数据模式的模型。在运行时，你的数据模式实体的实例通过CoreData框架被创建、管理和获得。
+通过为你的应用管理其数据模式，CoreData大大减少了必须书写的代码量。CoreData也提供如下功能：
+- 为优化性能在SQLite数据库中存储对象数据；
+- 一个管理数据表视图结果的NSFetchedResultsController类；
+- 对基本的文本编辑之外的undo/redo的管理；
+- 支持属性值的校验；
+- 支持传播改变确保对象之间的关系保持一致性；
+- 支持分组、过滤和在内存中优化数据。
+
+###### [Core Foundation Framework](http://www.lanou3g.com/bbs/forum.php?mod=viewthread&tid=5268)
+一组C-based接口，为ios应用提供基本的数据管理和服务功能。该框架包括如下支持：
+- 收集的数据类型（数组，集合等）
+- Bundles
+- 字符串管理
+- 日期和时间管理
+- 原始数据块管理
+- 偏好管理
+- 网址和视频流处理
+- 线程和循环运行
+- 端口和套接字通信
+CoreFoundation框架与Foundation框架紧密相关，为相同的基本功能提供Objective-C接口。当你需要混合使用Foundation对象和Core Foundation类型时，你能利用两个框架之间存在的“toll-freebridging”。toll-free bridging”意味着你能可交换地在两个框架的方法和功能中使用一些CoreFoundation和Foundation类型。这个支持对许多数据类型可用，包括集合和字符串数据类型。
+
+###### [Core Location Framework](http://www.cnblogs.com/dongwenbo/p/4299160.html)
+为应用提供位置信息。该框架使用GPS、蜂窝、或者Wi-Fi来定位用户的当前经度和纬度。
+
+###### Core Media Framework
+此框架提供AV Foundation框架使用的底层媒体类型。只有少数需要对音频或视频创建及展示进行精确控制的应用程序才会涉及该框架，其他大部分应用程序应该都用不上。
+
+###### [Core Motion Framework](http://www.jianshu.com/p/1e933586f72b)
+提供一组接口来存取设备上可获得的运动数据。
+该框架支持使用一组新的block-based接口来存取原始和加工过的加速度计数据。对于带有陀螺仪的设备，你也能获得原始的陀螺仪数据和加工过的反应设备方向和旋转速度的数据。
+你能在游戏或其它使用运动作为输入或作为增强用户体验的方式的应用中使用加速度计和陀螺仪两种数据。对于带有计步硬件的设备，你能存取它的数据来跟踪健康相关的运动。
+
+###### [Core Telephony Framework](http://blog.csdn.net/jymn_chen/article/details/19240903)
+提供与蜂窝电话的通话相关的信息交互的接口。
+
+###### [EventKit Framework](http://www.xuebuyuan.com/1849897.html)
+提供存取用户设备上的月历事件的接口。能够使用该框架来做如下事情：
+- 获取现有的从用户的日历事件和提醒
+- 添加事件到用户的日历
+- 为用户创建了提醒，并让它们出现在提醒应用程序
+- 配置告警日历活动，包括当这些报警器应触发设置规则
+
+```
+重要提示：访问用户的日历和提醒数据需要来自用户的明确许可。应用程序，因此必须为用户准备否认访问。我们也鼓励企业应用套件提供的Info.plist描述为需要访问的原因键。
+```
+###### [Foundation Framework](http://www.cnblogs.com/kenshincui/p/3885689.html)
+提供Core Foundation框架提供的许多功能的Objective-C封装。该框架提供如下功能的支持：
+- 集合数据类型（数组、集合等等）；
+- Bundles；
+- 字符串管理；
+- 日期和时间管理
+- 原始数据块管理
+- Preferences管理；
+- URL和流操作；
+- 线程和运行环；
+- Bonjour；
+- 通讯端口管理；
+- 国际化；
+- 规则表达式匹配；
+- Cache支持。
+
+###### [HealthKit Framework](http://swift.gg/2016/05/13/healthkit-introduction/)
+应用可以使用它来分享健康和健身数据。HealthKit管理从不同来源获得的数据，并根据用户的偏好设置，自动将不同来源的所有数据合并起来。
+
+###### [HomeKit Framework](http://www.cocoachina.com/ios/20150326/11411.html)
+用于与通信并控制在用户的家连接的设备的新框架。被介绍为家庭新设备提供更多的连接和更好的用户体验。HomeKit提供标准化的方式与这些设备进行通信。
+
+###### [JavaScript Core Framework](http://www.cnblogs.com/shaoting/p/5247208.html)
+为许多标准的JavaScript对象提供Objective-C语言的封装。使用该框架来执行JavaScript代码和分析JSON数据。
+
+###### [Mobile Core Services Framework](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/UTIRef/Introduction/Introduction.html)
+定义在通用类型标识符（UTIs）中使用的低级别类型。
+
+###### [Multipeer Connectivity Framework](http://www.cocoachina.com/industry/20140408/8118.html)
+支持附近设备的发现，并与那些设备直接通讯（不需要Internet连接）。
+使用该框架能够与附近设备通讯、容易的创建多人会话、支持可靠地传输顺序和实时数据。
+
+###### [NewsstandKit Framework](http://www.jianshu.com/p/935d18c5b5ae)
+通过Newsstand提供杂志和报纸内容的出版商能够使用NewsstandKit 框架(NewsstandKit.framework)创建它们自己的iOS应用，让用户启动新杂志和报纸新闻的后台下载。
+
+###### [PassKit Framework](http://lijianfei.sinaapp.com/?p=344)
+Passbook应用为用户提供了一个存储订货单、登机卡、入场券和商业折扣卡的位置。代替物理携带这些东西，用户现在能在IOS设备上存储它们。
+
+###### [Quick Look Framework](https://segmentfault.com/a/1190000005010273)
+可以使用该框架提供的视图控制器直接在用户界面中显示该文件的内容。
+
+###### Safari Services Framework
+提供以可编程的方式增加URLs到用户的Safari的书签的支持。
+
+###### [Social Framework](http://swift.gg/2016/02/04/social-framework-introduction/)
+提供一个简单的接口来存取用户的社交媒体账号。该框架取代Twitter框架并增加了其它社交账号，包括Facebook、Sina微博以及其它。
