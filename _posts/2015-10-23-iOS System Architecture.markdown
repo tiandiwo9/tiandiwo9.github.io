@@ -278,7 +278,7 @@ QuartzCore 框架(QuartzCore.framework)包含Core Animation接口。Core Animati
 3D 渲染框架。修改器、节点约束、骨骼动画。支持了粒子效果、物理引擎、脚本事件以及多通道分层渲染等多种技术。
 [demo](http://www.cocoachina.com/ios/20141113/10205.html)
  
- ###### [SpriteKit Framework](https://onevcat.com/2013/06/sprite-kit-start/)
+###### [SpriteKit Framework](https://onevcat.com/2013/06/sprite-kit-start/)
 为2d和2.5d游戏提供硬件加速的动画系统。SpriteKit提供大多数游戏需要的基础，包括一个图形引擎和动画系统，声音播放支持，一个物理仿真引擎。
 在Sprite Kit应用中内容组织为场景。一个场景包括纹理对象，视频，路径图形，核心图像过滤器和其它的特效。
 [SpriteKit和cocos2d对比](http://blog.sina.com.cn/s/blog_4b55f6860101iy87.html)
@@ -353,6 +353,7 @@ CFNetwork物理和理论上基于BSD sockets。
 ###### [Core Data Framework](http://allluckly.cn/%E6%8C%81%E4%B9%85%E5%8C%96/chijiuhua01)
 CoreData框架打算在数据模式是高结构化的应用中使用，在xcode中能够使用图形工具来建立一个表现你的数据模式的模型。在运行时，你的数据模式实体的实例通过CoreData框架被创建、管理和获得。
 通过为你的应用管理其数据模式，CoreData大大减少了必须书写的代码量。CoreData也提供如下功能：
+
 - 为优化性能在SQLite数据库中存储对象数据；
 - 一个管理数据表视图结果的NSFetchedResultsController类；
 - 对基本的文本编辑之外的undo/redo的管理；
@@ -362,6 +363,7 @@ CoreData框架打算在数据模式是高结构化的应用中使用，在xcode�
 
 ###### [Core Foundation Framework](http://www.lanou3g.com/bbs/forum.php?mod=viewthread&tid=5268)
 一组C-based接口，为ios应用提供基本的数据管理和服务功能。该框架包括如下支持：
+
 - 收集的数据类型（数组，集合等）
 - Bundles
 - 字符串管理
@@ -395,10 +397,13 @@ CoreFoundation框架与Foundation框架紧密相关，为相同的基本功能�
 - 配置告警日历活动，包括当这些报警器应触发设置规则
 
 ```
-重要提示：访问用户的日历和提醒数据需要来自用户的明确许可。应用程序，因此必须为用户准备否认访问。我们也鼓励企业应用套件提供的Info.plist描述为需要访问的原因键。
+重要提示：访问用户的日历和提醒数据需要来自用户的明确许可。
+应用程序，因此必须为用户准备否认访问。
+我们也鼓励企业应用套件提供的Info.plist描述为需要访问的原因键。
 ```
 ###### [Foundation Framework](http://www.cnblogs.com/kenshincui/p/3885689.html)
 提供Core Foundation框架提供的许多功能的Objective-C封装。该框架提供如下功能的支持：
+
 - 集合数据类型（数组、集合等等）；
 - Bundles；
 - 字符串管理；
