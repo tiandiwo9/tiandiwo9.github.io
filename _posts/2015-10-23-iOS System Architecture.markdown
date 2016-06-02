@@ -391,6 +391,7 @@ CoreFoundation框架与Foundation框架紧密相关，为相同的基本功能�
 
 ###### [EventKit Framework](http://www.xuebuyuan.com/1849897.html)
 提供存取用户设备上的月历事件的接口。能够使用该框架来做如下事情：
+ 办 ｀                     
 - 获取现有的从用户的日历事件和提醒
 - 添加事件到用户的日历
 - 为用户创建了提醒，并让它们出现在提醒应用程序
@@ -448,3 +449,13 @@ Passbook应用为用户提供了一个存储订货单、登机卡、入场券和
 
 ###### [Social Framework](http://swift.gg/2016/02/04/social-framework-introduction/)
 提供一个简单的接口来存取用户的社交媒体账号。该框架取代Twitter框架并增加了其它社交账号，包括Facebook、Sina微博以及其它。
+
+###### [StoreKit Framework](http://blog.devtang.com/2012/12/09/in-app-purchase-check-list/)
+提供在ios应用中购买内容和服务的支持，也被称作应用内购买。
+
+###### [System Configuration Framework](https://developer.apple.com/library/ios/samplecode/Reachability/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007324)
+能用它来确定设备的网络配置，也能使用该框架确定一个Wi-Fi或蜂窝连接是否在用以及一个特定的主机服务器是否能够存取。
+
+###### [WebKit Framework](http://www.cocoachina.com/ios/20150203/11089.html)
+除了显示HTML，可以提供基本的编辑支持，使用户可以替换文本和操作文档的文本和属性，包括CSS属性。
+
