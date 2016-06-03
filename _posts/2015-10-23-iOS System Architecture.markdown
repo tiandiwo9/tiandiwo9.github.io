@@ -459,3 +459,10 @@ Passbook应用为用户提供了一个存储订货单、登机卡、入场券和
 ###### [WebKit Framework](http://www.cocoachina.com/ios/20150203/11089.html)
 除了显示HTML，可以提供基本的编辑支持，使用户可以替换文本和操作文档的文本和属性，包括CSS属性。
 
+## 四、核心操作系统层（Core OS Layer）
+CoreOS层包含其它大多数技术建在其之上的低级别的功能。虽然应用不直接使用这些技术，它们被其它框架使用。在需要显而易见的处理安全或与外设通讯的情形，你也能使用该层提供的框架。
+
+### Core Services框架
+###### [Accelerate Framework](https://github.com/mattt/Surge#readme)
+包含执行数字信号处理、线性代数、图像处理计算的接口。
+使用该框架的优点是它们针对所有的ios设备上存在的硬件配置做了优化，因此你能写一次代码确保在所有设备上有效运行。
