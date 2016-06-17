@@ -505,5 +505,5 @@ IOS提供一组存取许多操作系统低级别功能的接口。应用通过Li
 - 内存分配
 - 数学计算
 
-###### [64-Bit Support](http://www.code4app.com/ios/RSA-Encrypt-and-Decrypt/5061d6476803faf86c000001)
+###### [64-Bit Support](http://www.jianshu.com/p/3fce0bd6f045)
 所有的系统库和框架是支持64位的，意味着它们能在32-bit和64-bit应用中使用。当以64-bit运行时编译时，应用可能运行的更快，因为在64-bit模式可以获得额外的处理器资源。
