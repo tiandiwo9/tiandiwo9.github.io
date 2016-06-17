@@ -466,3 +466,44 @@ CoreOS层包含其它大多数技术建在其之上的低级别的功能。虽�
 ###### [Accelerate Framework](https://github.com/mattt/Surge#readme)
 包含执行数字信号处理、线性代数、图像处理计算的接口。
 使用该框架的优点是它们针对所有的ios设备上存在的硬件配置做了优化，因此你能写一次代码确保在所有设备上有效运行。
+
+###### [Core Bluetooth Framework](http://southpeak.github.io/blog/2014/07/29/core-bluetoothkuang-jia-zhi-%5B%3F%5D-:centralyu-peripheral/)
+允许开发者与蓝牙低耗电外设（LE）交互。
+- 扫描蓝牙外设，连接和断开发现的蓝牙外设；
+- 声明应用的服务，转换ios 设备成其它蓝牙设备的外设；
+- 从IOS设备广播iBeacon信息；
+- 保存你的蓝牙连接的状态，当应用重新启动时恢复那些连接；
+- 蓝牙外设可获得性变化时获得通知。
+
+###### [External Accessory Framework](http://www.cnblogs.com/evangwt/archive/2013/04/04/2999661.html)
+外部附件框架 提供与连接到基于iOS的设备硬件配件通信支持
+
+###### [Generic Security Services Framework](http://www.ibm.com/developerworks/cn/aix/library/au-security_auth/)
+给ios应用提供一组标准安全相关的服务。该框架的基本接口规定在IETFRFC2743andRFC4401。
+
+###### [Local Authentication Framework](http://www.cocoachina.com/ios/20141114/10223.html)
+本地认证框架（LocalAuthentication.framework）使您可以使用触摸ID来验证用户的身份。
+
+###### [Local Authentication Framework](http://www.cocoachina.com/ios/20141114/10223.html)
+本地认证框架（LocalAuthentication.framework）使您可以使用触摸ID来验证用户的身份。
+
+###### [Network Extension Framework](http://blog.zorro.im/posts/iOS8-Network-Extension.html)
+为配置和控制虚拟专用网络（VPN）的支持。使用此框架来创建VPN配置。
+
+###### [Security Framework](http://www.code4app.com/ios/RSA-Encrypt-and-Decrypt/5061d6476803faf86c000001)
+该框架提供管理证书、公有和私有key和信任策略的接口。支持产生加密安全伪随机码。它也支持在keychain（保存敏感用户数据的安全仓库）中保存证书和加密key。
+在你创建的多个应用之间共享keychain是可能的。共享使它容易在相同的一套应用之间更平滑的协作。例如，你能使用该功能来共享用户口令或其它元素，否则可能使每个应用都需要提示用户。
+
+###### [System](http://www.code4app.com/ios/RSA-Encrypt-and-Decrypt/5061d6476803faf86c000001)
+IOS提供一组存取许多操作系统低级别功能的接口。应用通过LibSystem库存取这些功能。该C based的接口提供如下功能的支持：
+- 多任务（POSIX线程和GCD)
+- 网络（BSDsockets）
+- 文件系统存取
+- 标准I/O
+- Bonjour和DNS服务
+- 位置信息
+- 内存分配
+- 数学计算
+
+###### [64-Bit Support](http://www.code4app.com/ios/RSA-Encrypt-and-Decrypt/5061d6476803faf86c000001)
+所有的系统库和框架是支持64位的，意味着它们能在32-bit和64-bit应用中使用。当以64-bit运行时编译时，应用可能运行的更快，因为在64-bit模式可以获得额外的处理器资源。
