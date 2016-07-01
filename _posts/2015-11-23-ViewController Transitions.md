@@ -237,7 +237,7 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
         navigationController?.pushViewController(nextCVC, animated: true)
     }
     
-## 五、非常cool的开源代码分析
+## 五、Awesome开源代码分析
 转场动画里转场部分的实现其实很简单，大部分复杂的转场动画与本文范例里简单的转场动画相比，复杂的部分在动画部分，转场的部分都是一样的。
 
 
