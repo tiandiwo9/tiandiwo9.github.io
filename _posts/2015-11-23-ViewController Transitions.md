@@ -23,7 +23,7 @@ iOS 7 开放了相关 API 允许我们对转场效果进行全面定制，这太
 ## 二、Transitions详解
 下图是从 WWDC 2013 Session 218 整理的，解释了转场时视图控制器和其对应的视图在结构上的变化：
 
-![结构上的变化](http://example.com/example.png)
+![结构上的变化](https://raw.githubusercontent.com/GarfieldLover/GarfieldLover.github.io/master/assets/postImages/The%20Anatomy%20of%20Transition.png)
 
 转场过程中，作为容器的父 VC 维护着多个子 VC，但在视图结构上，只保留一个子 VC 的视图，所以转场的本质是下一场景(子 VC)的视图替换当前场景(子 VC)的视图以及相应的控制器(子 VC)的替换，表现为当前视图消失和下一视图出现，基于此进行动画，动画的方式非常多，所以限制最终呈现的效果就只有你的想象力了。Parent VC 可为 UIViewController, UITabbarController 或 UINavigationController 中的任何一种。
 
@@ -50,6 +50,8 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
 #### 3.Animation Controllers（动画控制器）
 遵从 UIViewControllerAnimatedTransitioning 协议，并且负责实际执行动画。
 
+![Animation Controllers](https://raw.githubusercontent.com/GarfieldLover/GarfieldLover.github.io/master/assets/postImages/IMG_0044.PNG)
+
 > public protocol UIViewControllerAnimatedTransitioning : NSObjectProtocol
 
     // This is used for percent driven interactive transitions, as well as for container controllers that have companion animations that might need to
@@ -60,6 +62,8 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
     
 #### 4.Interaction Controllers（交互控制器）
 通过遵从 UIViewControllerInteractiveTransitioning 协议来控制可交互式的转场。
+
+![Interaction Controllers](https://raw.githubusercontent.com/GarfieldLover/GarfieldLover.github.io/master/assets/postImages/IMG_0046.PNG)
 
 > public protocol UIViewControllerInteractiveTransitioning : NSObjectProtocol 
 
