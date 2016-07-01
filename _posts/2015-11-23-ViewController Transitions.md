@@ -219,7 +219,7 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
         }
     }
 
-[----------demo地址--------- ](http://example.com)
+[-------------------demo地址------------------ ](https://github.com/GarfieldLover/iOS-ViewController-Transition-Demo)
 
 ## 四、UICollectionViewController 布局转场（非常好玩）
 前面一直没有提到这种转场方式，与三大主流转场不同，布局转场只针对 CollectionViewController 搭配 NavigationController 的组合，且是作用于布局，而非视图。采用这种布局转场时，NavigationController 将会用布局变化的动画来替代 push 和 pop 的默认动画。苹果自家的照片应用中的「照片」Tab 页面使用了这个技术：在「年度-精选-时刻」几个时间模式间切换时，CollectionViewController 在 push 或 pop 时尽力维持在同一个元素的位置同时进行布局转换。
