@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ViewController Transitions
+title: View Controller Transitions
 date: 2015-10-12 15:32:24.000000000 +09:00
 tags: [Cocoa Touch , Architecture , Frameworks]
 ---
@@ -233,5 +233,144 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
         navigationController?.pushViewController(nextCVC, animated: true)
     }
     
-## 五、VCTransitionsLibrary 代码解析
+## 五、非常cool的开源代码分析
 转场动画里转场部分的实现其实很简单，大部分复杂的转场动画与本文范例里简单的转场动画相比，复杂的部分在动画部分，转场的部分都是一样的。
+
+
+类库 | 简介
+---|---
+VCTransitionsLibrary | 该库提供了多达10种转场效果，从技术上讲，大部分效果都是针对 transform 进行动画，如果你对这些感兴趣或是恰好有这方面的使用需求，可以学习这些效果的实现，从代码角度看，封装技巧也很值得学习，这个库是学习转场动画的极佳范例
+StarWars | 这个转场动画在视觉上极其惊艳，一出场便获得上千星星的青睐，它有贴合星战内涵的创意设计和惊艳的视觉表现，以及优秀的性能优化
+BubbleTransition | Mask 动画往往在视觉上令人印象深刻，这种动画通过使用一种特定形状的图形作为 mask 截取当前视图内容，使得当前视图只表现出 mask 图形部分的内容
+RadialTransition_swift | mask 2
+
+### VCTransitionsLibrary
+#### 1.代码封装
+
+TRViewControllerAnimatedTransitioning实现UIViewControllerAnimatedTransitioning协议，取得当前转场类型TransitionStatus、转场环境transitionContext等。
+```
+public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
+```
+封装TransitionInteractive协议。
+
+    var percentTransition: UIPercentDrivenInteractiveTransition?{get set}
+
+
+
+下列分别是present、push和tabbar的TransitioningDelegate实现。
+
+    //返回present transition实例
+    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionStatus = .Present
+        return transition
+    }
+    //返回Dismiss transition实例
+    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionStatus = .Dismiss
+        return transition
+    }
+     //返回InteractiveTransitioning实例，也就是UIPercentDrivenInteractiveTransition
+    public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
+        return transition.interacting ? transition.percentTransition : nil
+    }
+    
+    public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
+        return transition.interacting ? transition.percentTransition : nil
+    }
+    
+UIViewController+TRPresent这个类别中封装了presentViewController和dismissViewControllerAnimated方法。
+主要实现了
+
+    //设置vc的transitioningDelegate
+    viewControllerToPresent.transitioningDelegate = transitionDelegate
+
+在PushTransition中加入了UIPanGestureRecognizer，在手势滑动的各状态下更新InteractiveTransition的状态。
+
+       switch recognizer.state {
+        case .Began :
+            transition.interacting = true
+            transition.percentTransition = UIPercentDrivenInteractiveTransition()
+            //start
+            transition.percentTransition?.startInteractiveTransition((transition as! TRViewControllerAnimatedTransitioning).transitionContext!)
+            toVC!.navigationController!.tr_popViewController()
+        case .Changed :
+        //更新进度
+            transition.percentTransition?.updateInteractiveTransition(percent)
+        default :
+            transition.interacting = false
+            if percent > transition.interactivePrecent {
+                transition.cancelPop = false
+                transition.percentTransition?.completionSpeed = 1.0 - transition.percentTransition!.percentComplete
+                //完成并移除
+                transition.percentTransition?.finishInteractiveTransition()
+                fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
+            } else {
+            //end状态，如果进度大于0.3就完成，没有就取消
+                transition.cancelPop = true
+                transition.percentTransition?.cancelInteractiveTransition()
+            }
+            transition.percentTransition = nil
+        }
+        
+TabBarTransition实现返回
+
+    public func tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let transitionAnimation = transitionAnimation as? TabBarTransitionInteractiveable else {
+            return nil
+        }
+        return transitionAnimation.interacting ? transitionAnimation.percentTransition : nil
+    }
+    
+    public func tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transitionAnimation
+    }
+    //设置动画
+     tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: TRTabBarTransitionMethod.Slide)
+   
+    //点击tab时调用动画
+    public func tr_selected(index: ViewControllerIndex, gesture: UIGestureRecognizer, completion: (() -> Void)? = nil) 
+
+动画生成工厂方法模式类       
+
+
+```
+pushTransition.append(PushTransition(name: "OmniFocus", imageName: "OmniFocus60x60", pushMethod: .OMNI(keyView: logoImageView), interactive: false))
+    
+    struct PresentTransition {
+	let name: String
+	let imageName: String
+	let presentMethod: TRPresentTransitionMethod
+	let interactive: Bool
+    }
+```
+ TRPresentTransitionMethod 根据type创建相对的TransitionAnimation类型。  push的时候传入 method: updateTransition，最终给了navigationController的delegate方法。                                                                     		
+```
+navigationController?.tr_pushViewController(vc, method: updateTransition, statusBarStyle: .LightContent, completion: {
+```
+在转场过程中就会调用具体动画类里的方法。
+
+    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+
+#### 2.具体转场动画核心代码
+
+
+分类 | 核心代码
+---|---
+OMNI | fromVC!.view.layer.mask截取上半部分，bottomView截图下半部分，containView?.addSubview， fromVC!.view.layer.position.y -= topHeight， self.bottomView.layer.position.y += bottomHeight
+IBanTang | containView?.layer.addSublayer(lightMaskLayer),添加遮罩，keyViewCopy.layer.position 变化
+Fade | toVC!.view.layer.opacity = 0 , toVC!.view.layer.opacity = 1
+Page |  fromVC?.view.layer.transform = transform3D   , toVC?.view.layer.position.x = endPositionX + toVC!.view.layer.bounds.width / 2
+Blixt | self.keyViewCopy.frame变化，                fromVC?.view.layer.frame.origin.x = -rightX，  toVC?.view.layer.frame.origin.x = leftX
+Twitter |CATransform3DRotate 角度变化  fromVC?.view.layer.transform = transform,  toVC?.view.layer.frame = finalFrame
+PopTip |  maskView.frame = screenBounds,  maskView.alpha = startOpacity,  toVC?.view.layer.frame = startFrame ,            toVC?.view.layer.frame = finalFrame
+TaaskyFlip | startTransform = CATransform3DRotate(startTransform, CGFloat(angle), 0, 1, 0)  , toVC?.view.layer.transform = endTransform
+Elevate | maskLayerAnimation.fromValue = NSValue(CGSize: startSize), maskLayerAnimation.toValue = NSValue(CGSize: endSize),        maskViewPositionAnimation.fromValue = NSValue(CGPoint: startPosition),  maskViewPositionAnimation.toValue = NSValue(CGPoint: endPosition)
+Scanbot |  toVC?.view.frame.origin.y = toVCEndY, fromVC?.view.frame.origin.y = fromVCEndY , var percent = offsetY / view.bounds.size.height,           percentTransition?.updateInteractiveTransition(percent)
+
+未完待续～～～
