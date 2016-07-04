@@ -28,10 +28,10 @@ iOS 7 开放了相关 API 允许我们对转场效果进行全面定制，这太
 转场过程中，作为容器的父 VC 维护着多个子 VC，但在视图结构上，只保留一个子 VC 的视图，所以转场的本质是下一场景(子 VC)的视图替换当前场景(子 VC)的视图以及相应的控制器(子 VC)的替换，表现为当前视图消失和下一视图出现，基于此进行动画，动画的方式非常多，所以限制最终呈现的效果就只有你的想象力了。Parent VC 可为 UIViewController, UITabbarController 或 UINavigationController 中的任何一种。
 
 官方支持以下几种方式的自定义转场：
-1. 在 UINavigationController 中 push 和 pop;
-1. 在 UITabBarController 中切换 Tab;
-1. Modal 转场：present 和 dismiss;
-1. UICollectionViewController 的布局转场：UICollectionViewController 与 UINavigationController 结合的转场方式。
+- 在 UINavigationController 中 push 和 pop;
+- 在 UITabBarController 中切换 Tab;
+- Modal 转场：present 和 dismiss;
+- UICollectionViewController 的布局转场：UICollectionViewController 与 UINavigationController 结合的转场方式。
 
 iOS 7 以协议的方式开放了自定义转场的 API。转场协议由5种协议组成，在实际中只需要我们提供其中的两个或三个便能实现绝大部分的转场动画：
 
@@ -177,8 +177,8 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
     }
     
 实现交互化，在非交互转场的基础上将之交互化需要两个条件：
-1. 由转场代理提供交互控制器，这是一个遵守`UIViewControllerInteractiveTransitioning`协议的对象，不过系统已经打包好了现成的类UIPercentDrivenInteractiveTransition供我们使用。我们不需要做任何配置，仅仅在转场代理的相应方法中提供一个该类实例便能工作。另外交互控制器必须有动画控制器才能工作。
-1. 交互控制器还需要交互手段的配合，最常见的是使用手势，或是其他事件，来驱动整个转场进程。
+- 由转场代理提供交互控制器，这是一个遵守`UIViewControllerInteractiveTransitioning`协议的对象，不过系统已经打包好了现成的类UIPercentDrivenInteractiveTransition供我们使用。我们不需要做任何配置，仅仅在转场代理的相应方法中提供一个该类实例便能工作。另外交互控制器必须有动画控制器才能工作。
+- 交互控制器还需要交互手段的配合，最常见的是使用手势，或是其他事件，来驱动整个转场进程。
 
 
 
