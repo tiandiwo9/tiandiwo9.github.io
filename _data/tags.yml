@@ -22,8 +22,9 @@
 - slug: github-pages
   name: GitHub Pages
 
-- slug: jekyll
-  name: Jekyll
+- slug: AwesomeUI
+  name: AwesomeUI
   
-- slug: open-source
-  name: Open Source
+- slug: Transitions
+  name: Transitions
+

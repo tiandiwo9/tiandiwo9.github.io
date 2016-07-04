@@ -1,8 +1,8 @@
 ---
 layout: post
 title: View Controller Transitions
-date: 2015-10-12 15:32:24.000000000 +09:00
-tags: [Cocoa Touch , Architecture , Frameworks]
+date: 2015-11-23 15:32:24.000000000 +09:00
+tags: [Transitions , AwesomeUI]
 ---
 
 ## 一、简介
@@ -28,10 +28,11 @@ iOS 7 开放了相关 API 允许我们对转场效果进行全面定制，这太
 转场过程中，作为容器的父 VC 维护着多个子 VC，但在视图结构上，只保留一个子 VC 的视图，所以转场的本质是下一场景(子 VC)的视图替换当前场景(子 VC)的视图以及相应的控制器(子 VC)的替换，表现为当前视图消失和下一视图出现，基于此进行动画，动画的方式非常多，所以限制最终呈现的效果就只有你的想象力了。Parent VC 可为 UIViewController, UITabbarController 或 UINavigationController 中的任何一种。
 
 官方支持以下几种方式的自定义转场：
-- 在 UINavigationController 中 push 和 pop;
-- 在 UITabBarController 中切换 Tab;
-- Modal 转场：present 和 dismiss;
-- UICollectionViewController 的布局转场：UICollectionViewController 与 UINavigationController 结合的转场方式。
+
+1. 在 UINavigationController 中 push 和 pop;
+1. 在 UITabBarController 中切换 Tab;
+1. Modal 转场：present 和 dismiss;
+1. UICollectionViewController 的布局转场：UICollectionViewController 与 UINavigationController 结合的转场方式。
 
 iOS 7 以协议的方式开放了自定义转场的 API。转场协议由5种协议组成，在实际中只需要我们提供其中的两个或三个便能实现绝大部分的转场动画：
 
