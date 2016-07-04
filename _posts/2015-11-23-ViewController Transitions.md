@@ -247,12 +247,12 @@ func handlePan(panGesture: UIPanGestureRecognizer){
 
 类库 | 简介
 ---|---
-VCTransitionsLibrary | 该库提供了多达10种转场效果，从技术上讲，大部分效果都是针对 transform 进行动画，如果你对这些感兴趣或是恰好有这方面的使用需求，可以学习这些效果的实现，从代码角度看，封装技巧也很值得学习，这个库是学习转场动画的极佳范例
+TransitionTreasury | 该库提供了多达10种转场效果，从技术上讲，大部分效果都是针对 transform 进行动画，如果你对这些感兴趣或是恰好有这方面的使用需求，可以学习这些效果的实现，从代码角度看，封装技巧也很值得学习，这个库是学习转场动画的极佳范例
 StarWars | 这个转场动画在视觉上极其惊艳，一出场便获得上千星星的青睐，它有贴合星战内涵的创意设计和惊艳的视觉表现，以及优秀的性能优化
 BubbleTransition | Mask 动画往往在视觉上令人印象深刻，这种动画通过使用一种特定形状的图形作为 mask 截取当前视图内容，使得当前视图只表现出 mask 图形部分的内容
 RadialTransition_swift | mask 2
 
-### [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary)
+### [TransitionTreasury](https://github.com/DianQK/TransitionTreasury)
 #### 1.代码封装
 
 TRViewControllerAnimatedTransitioning实现UIViewControllerAnimatedTransitioning协议，取得当前转场类型TransitionStatus、转场环境transitionContext等。
