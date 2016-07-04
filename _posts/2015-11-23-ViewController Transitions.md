@@ -178,8 +178,9 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
     }
     
 实现交互化，在非交互转场的基础上将之交互化需要两个条件：
-- 由转场代理提供交互控制器，这是一个遵守`UIViewControllerInteractiveTransitioning`协议的对象，不过系统已经打包好了现成的类UIPercentDrivenInteractiveTransition供我们使用。我们不需要做任何配置，仅仅在转场代理的相应方法中提供一个该类实例便能工作。另外交互控制器必须有动画控制器才能工作。
-- 交互控制器还需要交互手段的配合，最常见的是使用手势，或是其他事件，来驱动整个转场进程。
+
+1. 由转场代理提供交互控制器，这是一个遵守`UIViewControllerInteractiveTransitioning`协议的对象，不过系统已经打包好了现成的类UIPercentDrivenInteractiveTransition供我们使用。我们不需要做任何配置，仅仅在转场代理的相应方法中提供一个该类实例便能工作。另外交互控制器必须有动画控制器才能工作。
+1. 交互控制器还需要交互手段的配合，最常见的是使用手势，或是其他事件，来驱动整个转场进程。
 
 
 
