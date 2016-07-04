@@ -183,8 +183,8 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
 1. 交互控制器还需要交互手段的配合，最常见的是使用手势，或是其他事件，来驱动整个转场进程。
 
 
-
-    func handlePan(panGesture: UIPanGestureRecognizer){
+```
+func handlePan(panGesture: UIPanGestureRecognizer){
         let translationX =  panGesture.translationInView(view).x
         let translationAbs = translationX > 0 ? translationX : -translationX
         let progress = translationAbs / view.frame.width
@@ -220,6 +220,8 @@ UIViewControllerTransitioningDelegate 是 iOS 7 新增的协议。
         default: break
         }
     }
+```
+
 
 [-------------------demo地址------------------ ](https://github.com/GarfieldLover/iOS-ViewController-Transition-Demo)
 
