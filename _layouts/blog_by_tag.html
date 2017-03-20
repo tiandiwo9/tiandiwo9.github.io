@@ -2,7 +2,7 @@
 layout: default
 ---
 <header id="post-header">
-    <h2 id="post-title">标签: {{ page.tag }}</h2>
+    <h2 id="post-title">Tag: {{ page.tag }}</h2>
     <!-- <h4 id="post-subtitle">Articles by tag</h4> -->
 </header>
 
@@ -10,6 +10,7 @@ layout: default
     {% if site.tags[page.tag] %}
         {% for post in site.tags[page.tag] %}
 						
+			    <li>
 			      <h2 class="post-list__post-title post-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
       <p class="excerpt">{{ post.content | strip_html | strip_newlines | truncate: 250 }}&hellip;</p>
 			      <div class="post-list__meta">
@@ -48,6 +49,7 @@ layout: default
            <span id="post-list__meta">{{ category_content }}   {{ tags_content }}</span>
 				   </div>
 			      <hr class="post-list__divider" />
+			    </li>
 
             {% if forloop.last %}
                 </div>
