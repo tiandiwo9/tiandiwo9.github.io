@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var pathName=window.location.pathname;
+
   $('a.blog-button').click(function() {
     // If already in blog, return early without animate overlay panel again.
     if (location.hash && location.hash == "#blog") return;
@@ -19,11 +19,7 @@ $(document).ready(function() {
     $('.main-post-list').removeClass('hidden');
   }
 
-  if (pathName.substring(0, 5) == "/tag/"||/\/blog\/tag\//i.test(pathName)) {
-    $('.panel-cover').addClass('panel-cover--collapsed');
-  }
-
-  if (pathName.substring(0, 10) == "/category/"||/\/blog\/category\//i.test(pathName)) {
+  if (window.location.pathname.substring(0, 5) == "/tag/") {
     $('.panel-cover').addClass('panel-cover--collapsed');
   }
 

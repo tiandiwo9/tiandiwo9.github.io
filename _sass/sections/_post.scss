@@ -11,15 +11,8 @@
 // SINGLE POST METAß
 // ------------------------------
 
-.post.related {
-    display: flex;
-    padding: 2rem 0 1rem;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-
 .post-meta {
-  margin: 0 0 .8em 0;
+  margin: 0 0 .4em 0;
   color: darken($gray, 2%);
 }
 
@@ -37,8 +30,8 @@
 
   .post-meta__avatar {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 22px;
+    height: 22px;
     margin: 0 .3em -.4em 0;
     border: none;
     box-shadow:none;

@@ -50,8 +50,8 @@ h3,
 h4,
 h5,
 h5 {
-  margin-top: .3em;
-  margin-bottom: .8em;
+  margin-top: 1.0em;
+  margin-bottom: .5em;
   font-family: $serif-font;
   font-weight: lighter;
   color: $gray-darkest;
@@ -176,13 +176,13 @@ pre {
 
 table {
   color: $gray-darkest;
-  font-size: .12em;
-  text-align: left;
-  line-height: 25px;
+  font-size: .9em;
+  text-align: center;
+  line-height: 40px;
   border-spacing: 0;
   border: 2px solid darken($primary-color, 10%);
   width: 90%;
-  margin: 15px auto;
+  margin: 50px auto;
 }
 
 thead tr:first-child {
@@ -280,8 +280,7 @@ td:last-child {
 
   .content-wrapper__inner {
     margin: 0 10%;
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding: 50px 0;
   }
 
 .footer {
