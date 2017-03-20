@@ -10,7 +10,12 @@
 // ------------------------------
 // SINGLE POST METAß
 // ------------------------------
-
+.post.related {
+    display: flex;
+    padding: 2rem 0 1rem;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
 .post-meta {
   margin: 0 0 .4em 0;
   color: darken($gray, 2%);
@@ -30,8 +35,8 @@
 
   .post-meta__avatar {
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     margin: 0 .3em -.4em 0;
     border: none;
     box-shadow:none;
