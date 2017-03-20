@@ -1,16 +1,6 @@
 <nav class="cover-navigation navigation--social">
   <ul class="navigation">
 
-  {% if site.social.weibo %}
-  <!-- Weibo -->
-  <li class="navigation__item">
-    <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}} 的微博" target="_blank">
-      <i class='social fa fa-weibo'></i>
-      <span class="label">Weibo</span>
-    </a>
-  </li>
-  {% endif %}
-
   {% if site.social.github %}
   <!-- Github -->
   <li class="navigation__item">
@@ -21,12 +11,42 @@
   </li>
   {% endif %}
   
+  {% if site.social.stackoverflow %}
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="http://stackoverflow.com/users/6160787/garfieldlover" title="@{{site.social.stackoverflow}}" target="_blank">
+      <i class='social fa fa-stack-overflow'></i>
+      <span class="label">stackoverflow</span>
+    </a>
+  </li>
+  {% endif %}
+  
   {% if site.social.twitter %}
   <!-- Twitter -->
   <li class="navigation__item">
-    <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
+    <a href="https://twitter.com/GarfieldLover5" title="@{{site.social.twitter}}" target="_blank">
       <i class='social fa fa-twitter'></i>
       <span class="label">Twitter</span>
+    </a>
+  </li>
+  {% endif %}
+  
+  {% if site.social.weibo %}
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/5892763359" title="@{{site.social.weibo}}" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  {% endif %}
+
+  {% if site.social.douban %}
+  <!-- douban -->
+  <li class="navigation__item">
+    <a href="https://douban.com/people/144029526/" title="@{{site.social.douban}}" target="_blank">
+      <i class='social fa fa-flickr'></i>
+      <span class="label">Douban</span>
     </a>
   </li>
   {% endif %}
@@ -40,14 +60,6 @@
     </a>
   </li>
   {% endif %}
-
-  <!-- RSS -->
-  <li class="navigation__item">
-    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
-      <i class='social fa fa-rss'></i>
-      <span class="label">RSS</span>
-    </a>
-  </li>
 
   {% if site.social.mail %}
   <!-- Email -->
