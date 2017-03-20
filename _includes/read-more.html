@@ -1,10 +1,9 @@
-<section class="read-more">
     <div class="post related">
-           {% if page.previous %}
+        {% if page.previous %}
        {% assign current = page.previous %}
 
         <a rel="prev" id="prev-btn" class="btn small square" href="{{ current.url }}">← {{ current.title }} </a>
-   {% endif %}
+        {% endif %}
 
        {% if page.next %}
        {% assign current = page.next %}
@@ -12,4 +11,5 @@
            {% endif %}
 
     </div>
-</section>
+<br/>
+<br/>
