@@ -19,9 +19,6 @@ $(document).ready(function() {
     $('.main-post-list').removeClass('hidden');
   }
 
-  if (window.location.pathname.substring(0, 5) == "/tag/") {
-    $('.panel-cover').addClass('panel-cover--collapsed');
-  }
   if (pathName.substring(0, 5) == "/tag/"||/\/blog\/tag\//i.test(pathName)) {
     $('.panel-cover').addClass('panel-cover--collapsed');
   }
