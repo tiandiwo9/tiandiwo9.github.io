@@ -1,7 +1,7 @@
 ---
 layout: post
 title: View Controller Transitions
-date: 2015-11-23 15:32:24.000000000 +09:00
+date: 2015-11-29 15:32:24.000000000 +09:00
 tags: [Transitions , AwesomeUI]
 ---
 
