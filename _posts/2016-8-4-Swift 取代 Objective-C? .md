@@ -10,7 +10,7 @@ tags: [Swift]
 
 Swift - 它的历史和背景故事
 
-Apple 于 2014 年的 WWDC（Worldwide Developers Conference 全球开发者大会）上首次推出了 Swift 这种编程语言，它是可用于 iOS、macOS、tvOS 以及 watchOS 平台开发的第二种官方编程语言。就在去年 9月份，Swift 已经更新到 4.0 版本，这次更新带来了很多改变和兼容旧版本的模式。
+Apple 于 2014 年的 WWDC（Worldwide Developers Conference 全球开发者大会）上首次推出了 Swift 这种编程语言，它是可用于 iOS、macOS、tvOS 以及 watchOS 平台开发的第二种官方编程语言。就在去年 9月份，Swift 已经更新到 3.0 版本，这次更新带来了很多改变和兼容旧版本的模式。
 
 在强调 iOS 8 SDK 发布的官方新闻稿中，Apple 对这个新编程语言的描述如下：
 
